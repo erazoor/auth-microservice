@@ -1,0 +1,46 @@
+{
+  "name": "auth-microservice",
+  "version": "1.0.0",
+  "description": "Boilerplate aiming to quickstart a project with a build in auth microservice using mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "dev": "cross-env NODE_ENV=development nodemon --legacy-watch src/index.js",
+    "prod": "cross-env NODE_ENV=production node src/index.js",
+    "lint": "eslint . --ext .js --quiet",
+    "lint:fix": "eslint **/*.js --fix",
+    "format": "prettier --write '*/*.{js,json}'",
+    "code-quality": "npm run lint && npm run format"
+  },
+  "keywords": [
+    "boilerplate",
+    "express",
+    "expressjs",
+    "node",
+    "javascript",
+    "js",
+    "auth",
+    "microservice",
+    "dockerized",
+    "docker",
+    "mongoose",
+    "mongodb"
+  ],
+  "author": "@erazoor",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "handlebars": "^4.7.8",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.3",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.9",
+    "passport": "^0.7.0",
+    "passport-google-oauth": "^2.0.0",
+    "winston": "^3.11.0"
+  }
+}
