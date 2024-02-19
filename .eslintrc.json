@@ -1,0 +1,38 @@
+{
+    "extends": [
+    "standard",
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended"
+],
+    "plugins": [
+    "import",
+    "node",
+    "promise",
+    "standard",
+    "prettier",
+    "jest"
+],
+    "env": {
+        "node": true,
+        "es6": true,
+        "jest/globals": true
+    },
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+              "endOfLine": "auto"
+            }
+        ],
+        "consistent-return": "warn", // require return statements to either always or never specify values
+        "eqeqeq": ["error", "always"], // require using === and !==
+        "node/no-missing-import": "off", // handled by import/no-unresolved
+        "no-redeclare": "error", // disallow declaring the same variable more then once
+        "no-undef": "error", // disallow using undeclared variables
+        "no-unused-vars": "warn", // disallow unused variables
+        "no-var": "error", // require using let or const instead of var
+        "prefer-const": "error", // require using const instead of let
+        "prefer-template": "error", // require using template strings instead of string concatenation
+        "no-unexpected-multiline": "error" // disallow confusing multiline expressions
+    }
+}
