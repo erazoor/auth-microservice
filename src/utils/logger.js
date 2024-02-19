@@ -47,21 +47,21 @@ const logger = winston.createLogger({
 		new winston.transports.File({
 			filename: 'logs/warn.log',
 			level: 'warn',
-			format: winston.format((info, opts) => {
+			format: winston.format((info) => {
 				return info.level === 'warn' ? info : false;
 			})(),
 		}),
 		new winston.transports.File({
 			filename: 'logs/info.log',
 			level: 'info',
-			format: winston.format((info, opts) => {
+			format: winston.format((info) => {
 				return info.level === 'info' ? info : false;
 			})(),
 		}),
 		new winston.transports.File({
 			filename: 'logs/debug.log',
 			level: 'debug',
-			format: winston.format((info, opts) => {
+			format: winston.format((info) => {
 				return info.level === 'debug' ? info : false;
 			})(),
 		}),
